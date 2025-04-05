@@ -30,4 +30,9 @@ public class CollectApiStepdefinitions {
     public void kullanici_gereki_header_degerleri_ile_bir_get_request_yapar() {
         response = RestAssured.given().header("authorization", ConfigReader.getProperty("CollectApiKey")).when().get(url);
     }
+
+    @Then("kullanici donen response degerini yazdrir")
+    public void kullanici_donen_response_degerini_yazdrir() {
+        response.prettyPrint();
+    }
 }
