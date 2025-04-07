@@ -36,4 +36,14 @@ public class stepDefinitionsJPH {
     public void kullanici_donen_response_un_durum_kodunun_oldugunu_dogrular(Integer expStatusCode) {
         Assertions.assertEquals(expStatusCode,response.getStatusCode());
     }
+
+    @Then("Kullanici donen response'un content type degerinin {string} oldugunu dogrular")
+    public void kullanici_donen_response_un_content_type_degerinin_oldugunu_dogrular(String expContentType) {
+        Assertions.assertEquals(expContentType,response.getContentType());
+    }
+
+    @Then("Kullanici donen response degerini JsonPath olarak kaydeder")
+    public void kullanici_donen_response_degerini_json_path_olarak_kaydeder() {
+        resJp = response.jsonPath();
+    }
 }
