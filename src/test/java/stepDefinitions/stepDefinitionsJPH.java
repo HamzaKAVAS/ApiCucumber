@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import utilities.ConfigReader;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
 public class stepDefinitionsJPH {
 
@@ -45,5 +46,10 @@ public class stepDefinitionsJPH {
     @Then("Kullanici donen response degerini JsonPath olarak kaydeder")
     public void kullanici_donen_response_degerini_json_path_olarak_kaydeder() {
         resJp = response.jsonPath();
+    }
+
+    @Then("Kullanici donen response icindeki {string} degerinin {string} oldugunu kontrol eder")
+    public void kullanici_donen_response_icindeki_degerinin_oldugunu_kontrol_eder(String expKey, String expValue) {
+        assertEquals(expValue,resJp.getString(expKey));
     }
 }
