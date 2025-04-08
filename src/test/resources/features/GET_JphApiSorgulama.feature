@@ -34,3 +34,5 @@ Feature: JPHApiSorgulama
 
     Given Kullanici "JPHUrl" adresine gider
     Then Kullanici path parametresi olarak "posts/70" tanimlar
+    Then Kullanici PUT request yapmak icin "Ahmet","Merhaba",10 70 degerleri ile reqBody hazirlar
+    Then Kullanici PUT request yaparak response degerini kaydeder
