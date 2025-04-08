@@ -36,3 +36,5 @@ Feature: JPHApiSorgulama
     Then Kullanici path parametresi olarak "posts/70" tanimlar
     Then Kullanici PUT request yapmak icin "Ahmet","Merhaba",10 70 degerleri ile reqBody hazirlar
     Then Kullanici PUT request yaparak response degerini kaydeder
+    Then Kullanici donen response'un durum kodunun 200 oldugunu dogrular
+    Then Kullanici donen response'un content type degerinin "application/json; charset=utf-8" oldugunu dogrular
