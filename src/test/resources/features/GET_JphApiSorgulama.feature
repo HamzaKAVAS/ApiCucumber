@@ -29,3 +29,8 @@ Feature: JPHApiSorgulama
     #    "userId": 10,                          "userId": 10,
     #    "id": 70                               "id": 70
     #   }
+
+  Scenario: PUT Request
+
+    Given Kullanici "JPHUrl" adresine gider
+    Then Kullanici path parametresi olarak "posts/70" tanimlar
