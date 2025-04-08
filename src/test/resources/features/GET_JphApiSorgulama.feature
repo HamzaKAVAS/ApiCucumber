@@ -38,3 +38,5 @@ Feature: JPHApiSorgulama
     Then Kullanici PUT request yaparak response degerini kaydeder
     Then Kullanici donen response'un durum kodunun 200 oldugunu dogrular
     Then Kullanici donen response'un content type degerinin "application/json; charset=utf-8" oldugunu dogrular
+    Then Kullanici "Connection" header degerinin "keep-alive" oldugunu test eder
+    Then Kullanici donen response degerini JsonPath olarak kaydeder
