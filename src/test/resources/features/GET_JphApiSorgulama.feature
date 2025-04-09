@@ -42,3 +42,5 @@ Feature: JPHApiSorgulama
     Then Kullanici donen response degerini JsonPath olarak kaydeder
     Then Kullanici userid degerinin 10 oldugunu test eder
     Then Kullanici id degerinin 70 oldugunu test eder
+    Then Kullanici response "title" degerinin "Ahmet" oldugunu test eder
+    Then Kullanici response "body" degerinin "Merhaba" oldugunu test eder
