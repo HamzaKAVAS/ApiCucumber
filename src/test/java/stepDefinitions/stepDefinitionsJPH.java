@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
@@ -61,5 +63,10 @@ public class stepDefinitionsJPH {
         reqBody.put("userId",userId);
         reqBody.put("id",id);
 
+    }
+
+    @Then("Kullanici PUT request yaparak response degerini kaydeder")
+    public void kullanici_put_request_yaparak_response_degerini_kaydeder() {
+        response = RestAssured.given().contentType(ContentType.JSON).when().body(reqBody.toString()).put(url);
     }
 }
