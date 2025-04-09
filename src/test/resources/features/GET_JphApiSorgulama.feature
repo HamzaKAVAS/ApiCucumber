@@ -40,3 +40,5 @@ Feature: JPHApiSorgulama
     Then Kullanici donen response'un content type degerinin "application/json; charset=utf-8" oldugunu dogrular
     Then Kullanici "Connection" header degerinin "keep-alive" oldugunu test eder
     Then Kullanici donen response degerini JsonPath olarak kaydeder
+    Then Kullanici userid degerinin 10 oldugunu test eder
+    Then Kullanici id degerinin 70 oldugunu test eder
